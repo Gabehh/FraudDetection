@@ -17,7 +17,7 @@ public class FraudDetectionContext
 
     public List<int> GetFraudulentOrders(List<Order> orders)
     {
-        var fraudulentOrderIds = new List<int>();
+        var fraudulentOrderIds = new HashSet<int>();
         var ordersCount = orders.Count;
 
         for (int i = 0; i < ordersCount; i++)
@@ -42,7 +42,7 @@ public class FraudDetectionContext
                 
             }
         }
-        return [.. fraudulentOrderIds.Distinct().OrderBy(id => id)];
+        return [.. fraudulentOrderIds.OrderBy(id => id)];
     }
 
 }
