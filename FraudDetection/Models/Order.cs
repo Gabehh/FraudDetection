@@ -1,13 +1,13 @@
 ﻿namespace FraudDetection.Models;
 
-public class Order
+public struct Order
 {
-    public required int OrderId { get; set; }
-    public required int DealId { get; set; }
-    public required string Email { get; set; }
-    public required string StreetAddress { get; set; }
-    public required string City { get; set; }
-    public required string State { get; set; }
-    public required string ZipCode { get; set; }
-    public required string CreditCard { get; set; }
+    public int OrderId { get; set; }
+    public int DealId { get; set; }
+    public string Email { get; set; }
+    public string StreetAddress { get; set; }
+    public string City { get; set; }
+    public string State { get; set; }
+    public string ZipCode { get; set; }
+    public string CreditCard { get; set; }
 }
